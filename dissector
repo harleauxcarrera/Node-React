@@ -1,0 +1,18 @@
+worskspace
+one to one project to dissector
+one workspace open a time
+tree structure all nodes do not need connections
+  only if they are conditions
+      blocks that have a field that doesnt need a connection should not show connection to other nodemon
+      (address)
+import the pcap
+keep the packet preiview area on the bottom
+ need to have button to apply dissector to the packets
+ after the dissector is built u need to apply to the packets
+  blocks should have drop down fields for wanted fields
+    shouldnt have to drop two blocks
+
+how to delete blocks if not wanted/needed
+
+each box should have the ability to create a logic inside
+  do not have logic/loops/ 

@@ -1,0 +1,27 @@
+This is the Node-React tutorial
+
+Use this page as a reference to points in time where the lectures were being watched
+Title every new entry with the date and the section of the lectures that you were writing about
+
+
+November 8th, 2017 // Just watched 'Section 4 Lecture 30'
+  Implemented Google OAuth up to the point where
+
+  Logging in works like this:
+  Signup with google-> takes u to google sign in page-> log in on google -> makes an entry
+  for the user in the database with returned credentials and then redirects
+  to website. Each time user logs in after signing up, mongodb will check to see if
+  user already exists by matching the ID in DB and if so, return with a cookie that grants
+  access that particular visit.
+
+  MONGODB INTRO:
+  Make a 'Model Class' that acts as a monogdb collection
+  A 'Model instance' refers to a single record in the collection (JSON)
+
+  Created a mongodb instance on Mlab.com with user: harleauxcarrera pss: pLease313
+
+  left off at section 4 lecture 33 @4:50 where initial attempt
+  to connect to Mongodb instance made on Mlab.com
+  using the MONGOURI
+
+   trying to require 'keys.js' not working
