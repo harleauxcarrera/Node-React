@@ -9,12 +9,12 @@ to start the script run npm run dev
 const express = require('express');//framework
 const mongoose = require('mongoose');
 const app = express();//create the express app
-//const keys = require('./config/keys');//use usr&password to connect to mongodb instance on line 17
+const keys = require('./keys');//use usr&password to connect to mongodb instance on line 17
                                     //attatch 'app' object to external routes file
 require('./routes/authRoutes')(app);//immediatley calls with app object
 require('./Services/passport');//no need to store constant bc there is no return
 //connect to the mongoDB instance we made at Mlab.com using the standard MONGODB URI option
-//mongoose.connect('keys.mongoURI');
+mongoose.connect('mongodb://harleauxcarrera:please313@ds151955.mlab.com:51955/nodereactudemy');
 //**ROUTES**//
 app.get('/', function(req,res){
   res.redirect('landing.html')

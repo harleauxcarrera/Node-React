@@ -3,7 +3,7 @@
 
 const passport = require('passport');//authentication
 const GoogleStrategy = require('passport-google-oauth20').Strategy//export only 'Strategy' property
-const keys = require('./keys.js');//google client auth keys
+const keys = require('../keys');//google client auth keys
 //google authetication using passport
 passport.use(
   new GoogleStrategy(

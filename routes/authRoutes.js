@@ -1,4 +1,4 @@
-const passport = require('passport');
+const passport = require('passport');//require passport module
 module.exports = app => {
 
     //configure redirect URIs in googleAPI dashboard so google
