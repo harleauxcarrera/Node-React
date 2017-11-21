@@ -25,3 +25,13 @@ November 8th, 2017 // Just watched 'Section 4 Lecture 30'
   using the MONGOURI
 
    trying to require 'keys.js' not working
+
+Monday November 20th :
+  Was able to fix the require 'keys ' file
+  Next I fixed the Mlab URI and am now connecting to the instance of MongoDB on mlab
+  (Lecture 34)
+  Finally create new user instance in mongo User collection
+    grab the user's google profile id and save to property 'googleId' defined in User model Schema
+      ensure that the same user doesn't get created twice by checking User collection
+      and making sure user with same googleId doesn't already exist
+  left off at lecture 39

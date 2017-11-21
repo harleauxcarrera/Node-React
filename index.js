@@ -12,7 +12,9 @@ const app = express();//create the express app
 const keys = require('./keys');//use usr&password to connect to mongodb instance on line 17
                                     //attatch 'app' object to external routes file
 require('./routes/authRoutes')(app);//immediatley calls with app object
+require('./models/User')//require in the User model file
 require('./Services/passport');//no need to store constant bc there is no return
+
 //connect to the mongoDB instance we made at Mlab.com using the standard MONGODB URI option
 mongoose.connect('mongodb://harleauxcarrera:please313@ds151955.mlab.com:51955/nodereactudemy');
 //**ROUTES**//
