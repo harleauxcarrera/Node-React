@@ -47,3 +47,20 @@ Lecture 42
 
     Left off  lecture 42 -  attempt is made to visit /api/current_user
     and see the returned user printed  but comes back undefined.
+Thursday November 24th
+Lecture 42
+  Fixed order of statements (app.use CookieSession comes before the initialize and session() calls)
+Lecture 46
+  Making two sets of keys, one for production (deployment) and one for development
+      Need to create seperate Mongo database and Google API account to have seperate set of keys
+        Create database in  mlab
+          create new user (for access using URI)
+        Create new project at console.developers.google.com
+          Enable the API
+          search for google+ API
+            Click Enable
+              create new credentials of type Oauth client id
+                configure consent
+            Web application
+              Authorized redirect URIS specifies what URL to go back to after google Auth in app
+                (use Heroku url for production set)
