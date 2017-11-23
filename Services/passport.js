@@ -6,7 +6,20 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy//export only 
 const keys = require('../keys');//google client auth keys
 const mongoose = require('mongoose');
 
+
 const User = mongoose.model('users');//require the User model by saving to const
+//give user cookie
+passport.serializeUser((user, done) => {
+  done(null, user.id);//get unique mongo id
+});
+//check user cookie
+passport.deserializeUser((id, done) => {//check mongo id
+  User.findById(id)//find that id in database
+    .then(user => {//continue with user if found
+      done(null, user);//return user
+    });
+});
+
 //google authetication using passport
 passport.use(
   new GoogleStrategy(
@@ -19,7 +32,7 @@ passport.use(
         //first check in the User collection if someone already has this incoming profile id saved as their google id
         User.findOne({googleId: profile.id}).then ((existingUser) => {//returns a 'promise' (chained on .then)
             if(existingUser){//if user already exists dont re create
-              
+
               done(null, existingUser);//need to call done method when finished creating User, use null to indicate no error
             }else{
               //create new user:

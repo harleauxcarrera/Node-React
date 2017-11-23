@@ -35,3 +35,15 @@ Monday November 20th :
       ensure that the same user doesn't get created twice by checking User collection
       and making sure user with same googleId doesn't already exist
   left off at lecture 39
+
+Wednesday November 22nd,
+Lecture 42
+  Enabled cookies in app
+    tell  passport to use  cookies to manage google authentication
+  How cookies work:
+    Request comes in, cookie-session extracts cookie data-> passport pulls userid
+    out of cookie data->deserializeUser function used to turn userid into a user object->
+    that user model gets added to the request and sent to route handler
+
+    Left off  lecture 42 -  attempt is made to visit /api/current_user
+    and see the returned user printed  but comes back undefined.
