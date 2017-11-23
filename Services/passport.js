@@ -14,9 +14,9 @@ passport.serializeUser((user, done) => {
 });
 //check user cookie
 passport.deserializeUser((id, done) => {//check mongo id
-  User.findById(id)//find that id in database
-    .then(user => {//continue with user if found
+  User.findById(id).then(user => {//continue with user if found
       done(null, user);//return user
+
     });
 });
 

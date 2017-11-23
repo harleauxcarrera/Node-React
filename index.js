@@ -8,22 +8,16 @@ to start the script run npm run dev
 //**REQUIRED**//
 const express = require('express');//framework
 const mongoose = require('mongoose');
-
-const keys = require('./keys');//use usr&password to connect to mongodb instance on line 17
-const passport = require('passport');
 const cookieSession = require('cookie-session');
-const app = express();//create the express app
-//get app to use cookies
-app.use(passport.initialize());
-app.use(passport.session());
-
-                                //attatch 'app' object to external routes file
-require('./routes/authRoutes')(app);//immediatley calls with app object
+const passport = require('passport');
+const keys = require('./keys');//use usr&password to connect to mongodb instance on line 17
 require('./models/User')//require in the User model file
 require('./Services/passport');//no need to store constant bc there is no return
 
 //connect to the mongoDB instance we made at Mlab.com using the standard MONGODB URI option
 mongoose.connect('mongodb://harleauxcarrera:please313@ds151955.mlab.com:51955/nodereactudemy');
+
+const app = express();//create the express app
 
 app.use(
   cookieSession({
@@ -31,13 +25,12 @@ app.use(
     keys: [keys.cookieKey]//use cookieKey from keys.js
   })
 );
+//get app to use cookies
+app.use(passport.initialize());
+app.use(passport.session());
+                              //attatch 'app' object to external routes file
+require('./routes/authRoutes')(app);//immediatley calls with app object
 
-
-
-//**ROUTES**//
-app.get('/', function(req,res){
-  res.redirect('landing.html')
-})
 
 
 /*Must do following for Google Auth strategy to work:
