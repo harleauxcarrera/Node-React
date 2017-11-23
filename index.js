@@ -19,6 +19,9 @@ mongoose.connect('mongodb://harleauxcarrera:please313@ds151955.mlab.com:51955/no
 
 const app = express();//create the express app
 
+
+/* app.use() act as middleware to modify incoming requests
+before they are sent off to route handlers*/
 app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,
@@ -31,7 +34,9 @@ app.use(passport.session());
                               //attatch 'app' object to external routes file
 require('./routes/authRoutes')(app);//immediatley calls with app object
 
-
+app.get('/' , (req, res) => {
+  res.send('hey there hows it going?');
+});
 
 /*Must do following for Google Auth strategy to work:
         go to console.developers.google.com

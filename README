@@ -64,3 +64,18 @@ Lecture 46
             Web application
               Authorized redirect URIS specifies what URL to go back to after google Auth in app
                 (use Heroku url for production set)
+            Heroku deployment
+                Add "engines" in package.json, specify what version of node and npm
+                Specify a start script. have to tell heroku what command to run to start server
+                  add "start" script in package.json
+                Create a .gitIgnore file to not commit any dependencies to git
+                Refer to lecture 13 for any new deployments of nodejs projects to Heroku
+              Deployment process
+                Create Heroku account
+                Install heroku cli
+                  heroku login
+                  heroku create   (create ap)
+                    Generates random url for site and gitHub repo that acts as deployment
+                    use git remote add <heroku.git url> (might already exist)
+                      git push heroku master to push to deployment repo
+                      
