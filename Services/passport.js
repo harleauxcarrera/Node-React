@@ -26,7 +26,7 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSectret,
-      callbackURL: '/auth/google/callback', //route that will be redirected to
+      callbackURL: 'https://quiet-coast-17722.herokuapp.com/auth/google/callback', //route that will be redirected to
       proxy: true
     },
       (accessToken, refreshToken, profile, done) =>{//call done when finished creating user
