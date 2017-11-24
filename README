@@ -84,4 +84,10 @@ Lecture 47
   in google API when create credential for projects
 
     use heroku address by itslef in authorized origin url
-  
+Lecture 49
+
+    deployed heroku app with environment keys
+    configured key.js to pull in key file depending on the environment (dev or prod)
+    declare environment keys in heroku dashboard
+    push to heroku master and deploy
+    google/auth/callback
