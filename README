@@ -127,4 +127,8 @@ November 25th Friday
   and back end server at the same time (using conccurently)
 
   run npm run dev to start both servers
-  
+
+  Created a link in app.js 'sign in with google'
+    Modified package.json file in client dir to
+    route to correct url (which is on localhost 5000)
+    
