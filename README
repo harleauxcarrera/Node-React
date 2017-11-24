@@ -91,3 +91,40 @@ Lecture 49
     declare environment keys in heroku dashboard
     push to heroku master and deploy
     google/auth/callback
+
+November 25th Friday
+
+  Changed Heroku Env keys to production set (had same keys as dev set before)
+    Test production keys by deploying heroku app (heroku open) and add auth/google route
+
+  Lecture 50 CREATING THE REACT APPLICATION
+    npm install create-react-app
+      run create-react-app client to create new react application inside directory(creates client dir)
+        this new react app has its own built in server
+          change into client dir and run npm start to run react server
+            should open on local host 3000
+            Now we have a second server for development (confusing)
+              Edit app.js to edit the home react page
+
+      Servers explained
+        Express server will only generate json data to serve it (uses mongo)
+        React server takes all components and bundles them using babel and spits
+        out single bundle.js file that will be loaded into the browser
+
+        One server for all the back end  data (express)
+        One server for front end (react)
+
+        going to get them to work together in lecture 53
+
+  Lecture 53
+
+  Run both servers together at the same time
+    (can be done by starting npm start in client dir and also npm run dev in Node-React dir)
+        Don't really want to do This (want to start both at same time)
+          Can be done with a package called 'concurrently' (install that module)
+  Be aware that these two dirs have their own package.json files
+  Inside of Node-React dir , edit package.json, edit scripts to run both front end server
+  and back end server at the same time (using conccurently)
+
+  run npm run dev to start both servers
+  
