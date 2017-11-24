@@ -78,4 +78,10 @@ Lecture 46
                     Generates random url for site and gitHub repo that acts as deployment
                     use git remote add <heroku.git url> (might already exist)
                       git push heroku master to push to deployment repo
-                      
+Lecture 47
+
+  add /auth/google/callback to heroku site address and add as callbackURL
+  in google API when create credential for projects
+
+    use heroku address by itslef in authorized origin url
+  

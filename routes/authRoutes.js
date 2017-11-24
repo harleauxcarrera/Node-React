@@ -23,7 +23,7 @@ module.exports = app => { //short hand to export this file to app
 
     app.get('/api/logout', (req,res) => {
       req.logout(); //passport attaches logout method to request in every routes
-      res.send("logged out, current user is: " +req.user);              //logout() kills the cookie and logs user out
+      res.send("logged out, current user is: " +req.user);//logout() kills the cookie and logs user out
     });
 
 
