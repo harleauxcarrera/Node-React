@@ -131,4 +131,28 @@ November 25th Friday
   Created a link in app.js 'sign in with google'
     Modified package.json file in client dir to
     route to correct url (which is on localhost 5000)
-    
+      added proxy
+  Lecture 55
+
+    The use of the relative path in the call back URL is for it to work regardless of
+    whether in prod or dev
+
+    added additional callback url in google api console (:3000/auth/google/callback)
+  Lecture 56
+
+    Since two seperate servers are made,
+    the way it works is creact-react app has the front end server running with
+    a proxy pointed to the backend express server which acts as an unseen middleman
+    in terms of the browser's point of view.
+  Lecture 57
+
+    Ajax requests use fetch function to cop Json from servers
+      fetch returns a promise: chain on a .then(=>) with re.JSON
+      refactored the second object in google strategy in passport.js
+      to use async function syntax instead of using .then promises
+
+  Moving on to Lecture 59
+
+  The Front End
+
+  

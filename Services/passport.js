@@ -29,20 +29,16 @@ passport.use(
       callbackURL: '/auth/google/callback', //route that will be redirected to
 
     },
-      (accessToken, refreshToken, profile, done) =>{//call done when finished creating user
+    //declare as async function, add await to each returned promise instead of using .then()s
+      async (accessToken, refreshToken, profile, done) =>{//call done when finished creating user
         //first check in the User collection if someone already has this incoming profile id saved as their google id
-        User.findOne({googleId: profile.id}).then ((existingUser) => {//returns a 'promise' (chained on .then)
+        const existingUser = await User.findOne({googleId: profile.id})//returns a 'promise' (chained on .then)
             if(existingUser){//if user already exists dont re create
-
-              done(null, existingUser);//need to call done method when finished creating User, use null to indicate no error
-            }else{
-              //create new user:
-              new User({ googleId: profile.id }).save()//create and save User instance with googleId property
-                .then(user => done(null, user)); //chain on .then with returned promise 'user' and call done method with that new user
+              return done(null, existingUser);//need to call done method when finished creating User, use null to indicate no error
             }
-
-          });
-
+              //create new user:
+            const user = new User({ googleId: profile.id }).save()//create and save User instance with googleId property
+            done(null, user); //chain on .then with returned promise 'user' and call done method with that new user
       }
     )
   );//make use of this strategy and create instance
