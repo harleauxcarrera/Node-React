@@ -155,4 +155,15 @@ November 25th Friday
 
   The Front End
 
-  
+  Lecture 60
+
+    App.js will host the front end components and index.js will host the redux service
+      App.js is the root of the react side of the web app
+
+    The way redux works:
+        React store is the root component while combineReducer makes calls to
+        other reducers to figure out the state of the application
+
+        React-redux library is to make sure react and redux work correctly
+          A provider tag is what serves as the glue behind the react and redux
+          The react store is used to access depply nested data in the component tree
