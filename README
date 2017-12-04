@@ -167,3 +167,22 @@ November 25th Friday
         React-redux library is to make sure react and redux work correctly
           A provider tag is what serves as the glue behind the react and redux
           The react store is used to access depply nested data in the component tree
+    Lecture 63
+
+    Fixed app.js not found error,
+
+    How redux is connected to react:
+      'provider' is a component from the react-redux
+      library that makes the connection from redux to the react application
+      and makes every component the ability to access the data store
+      to update the state of the application
+    Creating reducers to use in the apps
+      First reducer is the auth reducer to check if the user is logged in
+      Second one is survey reducer to save all teh surveys the user makes
+      Reducers are passed to the provider tag inside index.js
+      Create reducers folder, add authReducer.js and index.js
+        import reducers and pass as argument to the data store create store
+
+    Lecture 68
+
+    created several dummy components and added a rule paths

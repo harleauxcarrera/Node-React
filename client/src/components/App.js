@@ -1,9 +1,21 @@
 import React from 'react';
+//BrowserRouter tells react router how to behave - changes components on screen
+//Route object sets rule of what components will be visual on screen in a given URL
+import {BrowserRouter, Route} from 'react-router-dom';
+
+const Header = () => <h2>Header</h2>;
+const Dashboard = () => <h2>Dashboard</h2>;
+const SurveyNew = () => <h2>SurveyNew</h2>;
+const Landing = () => <h2>Landing</h2>;
 
 const App = () => {
   return(
     <div>
-    Hi there!
+      <BrowserRouter>
+        <div>
+          <Route path = "/" component={Landing} />
+        </div>
+      </BrowserRouter>
     </div>
   );
 };
