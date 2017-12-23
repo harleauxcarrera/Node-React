@@ -186,3 +186,43 @@ November 25th Friday
     Lecture 68
 
     created several dummy components and added a rule paths
+
+    December 23rd
+    Lecture 68 review
+
+    Setting up react router
+      Import browserRouter as the brains of the react BrowserRouter
+        BrowserRouter expects to have ATMOST one child
+      import Route to set up rules for what compnonets will be shown on the screen
+
+      set up some dummy components
+      set up routes to show those components
+        use the keyword exact for react router to use exact path string
+      Make sure header component is always visible by
+      placing the header compnonet inside browserrouter Div
+          remove dummy component and make seperate component file for Header
+            import into App.js
+
+  Introducing Materialize CSS
+    import using NPM and not using the CDN link
+      npm install --save materialize-CSS
+    Making use of WebPack (module loader)
+    to condense alot of JS files into one file
+    Webpack sees css import statements and ensures to read them as such
+    Import materialize-css-min into index.js without using relative path "./"
+      for Webpack to parse import statement as node module
+    After importing the css file, fonts change but to ensure that
+    the file was imported, change some aspects of a component and see if
+    the CSS is changing.
+      Look at materialize css doc on navbar and copy paste right aligned code
+    Use "className" when using react components and not "class" like in CSS
+    Now that we have the navbar set up we have to make sure to show the correct
+    info on the nav by checking whether a user is logged in or not
+
+    How fetching data works in a react app
+      React components calls an Action Creator
+      Returns an Action which is
+      Sent to a Reducer which then
+      Updates the state in the Store
+
+    Left off at Lecture 74
