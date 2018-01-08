@@ -226,3 +226,27 @@ November 25th Friday
       Updates the state in the Store
 
     Left off at Lecture 74
+
+    Lecture 75
+
+    Created action creator
+    installed redux thunk
+    installed axios
+
+    Refactor App to class based component in order to wire up the action Creator
+
+    add componentDidMount method in App.js
+    react-redux library is used to get react to work wth redux since redux was made assuming that you
+    would not be using react with it
+    the imported connect function from react-redux is used to make components able to call actionscreators
+    import all the action creators from the actions folder with *
+
+    Summary: When the app is ran, the app component calls action creator (fetchUser)
+      the action creator makes the AJAX request
+      action is the dispatched to a reducer to figure out the new state (in this case if a user is loggedin)
+
+
+    FetchUser action creator wired up to App.js and tested to see if user was being detected once signing in
+     left off at LECTURE 80
+
+     

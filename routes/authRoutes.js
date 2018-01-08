@@ -19,6 +19,7 @@ module.exports = app => { //short hand to export this file to app
     //get current user route
     app.get('/api/current_user', (req,res) => {
       res.send(req.user + "hey there");//passport attaches user to request in every route
+
     });
 
     app.get('/api/logout', (req,res) => {
