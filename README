@@ -249,4 +249,16 @@ November 25th Friday
     FetchUser action creator wired up to App.js and tested to see if user was being detected once signing in
      left off at LECTURE 80
 
-     
+     The auth reducer (used to process the return from the action creator)
+      We will give it 3 different kind of Returns
+        Null, User, False: That way we can see if there is a user logged in and stay in null while data of user
+        is being retreived
+
+    Hook upthe Header Component to the redux store since the store knows whether the user is loggeed in Now
+    due to the use of the FetchUser action creator and the auth reducer that carries out the return
+    pull out the AUTH piece of state from the redux wstore which wtells us if the user is or isnt loggedin
+    how to hook up a component to the redux store:
+      import the Connect helper from react redux
+      define the map to state props function
+      then pull out the pieces of data that you actually Need
+      
