@@ -261,4 +261,14 @@ November 25th Friday
       import the Connect helper from react redux
       define the map to state props function
       then pull out the pieces of data that you actually Need
-      
+
+      Lecture 84
+
+      Set up header component ; knows when user is logged in
+      setting up log out action can be done in two ways:
+        Full http request: would make browser have to refresh the page(takes long)
+        AJAX request: only updates the redux store (action creator->reducer->reduxstore
+        (updates react component instead of whole page refresh))
+
+        Logout button on header component href /api/logout in authRoutes and
+        redirects to landing (/)

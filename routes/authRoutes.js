@@ -13,8 +13,13 @@ module.exports = app => { //short hand to export this file to app
     }
     ));
 
-    //call back route
-    app.get('/auth/google/callback', passport.authenticate('google'));
+    // after login callback route, passes control to pass.auth function, then respose redirecited by chained route handler
+    app.get('/auth/google/callback',
+     passport.authenticate('google'),
+     (req, res) => {
+       res.redirect('/surveys');
+     }
+   );
 
     //get current user route
     app.get('/api/current_user', (req,res) => {
@@ -24,7 +29,8 @@ module.exports = app => { //short hand to export this file to app
 
     app.get('/api/logout', (req,res) => {
       req.logout(); //passport attaches logout method to request in every routes
-      res.send("logged out, current user is: " +req.user);//logout() kills the cookie and logs user out
+      res.redirect('/'); //redirect user to landing page when logged out
+      res
     });
 
 
