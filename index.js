@@ -3,7 +3,7 @@ use npm to insall nodemon
 go to package.json scripts
 add "dev": "nodemon index.js" to scripts
 to start the script run npm run dev
-*/
+* add a comment here to see whats up/
 
 //**REQUIRED**//
 const express = require('express');//framework
