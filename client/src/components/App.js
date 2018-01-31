@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+//Import Landing object from js file
+import Landing from './Landing';
 //BrowserRouter tells react router how to behave - changes components on screen
 //Route object sets rule of what components will be visual on screen in a given URL
 import {BrowserRouter, Route} from 'react-router-dom';
@@ -8,7 +10,7 @@ import Header from './Header';
 
 const Dashboard = () => <h2>Dashboard</h2>;
 const SurveyNew = () => <h2>SurveyNew</h2>;
-const Landing = () => <h2>Landing</h2>;
+
 
 class App extends Component {
 

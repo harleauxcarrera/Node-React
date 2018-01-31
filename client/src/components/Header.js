@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import './main.css'
+//Link tag replaces <a> tag
+import { Link } from 'react-router-dom';
 
 class Header extends Component{
 
@@ -23,9 +25,14 @@ renderContent(){
     return(
       <nav>
         <div className="nav-wrapper">
-            <a className = "left brand-logo ">
-                Carlos Emaily
-            </a>
+    
+            <Link
+            // if props.user true return '' : else return '';
+            to={this.props.auth ? './surveys' : '/'}
+            className = "left brand-logo "
+            >
+             Carlos Emaily
+            </Link>
             <ul class="right">
               {this.renderContent()}
             </ul>

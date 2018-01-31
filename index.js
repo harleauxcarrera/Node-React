@@ -5,7 +5,7 @@ add "dev": "nodemon index.js" to scripts
 to start the script run npm run dev
 * add a comment here to see whats up..ayy/
 
-//**REQUIRED**//
+//**REQUIRED**/
 const express = require('express');//framework
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
