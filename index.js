@@ -35,7 +35,7 @@ app.use(passport.session());
 require('./routes/authRoutes')(app);//immediatley calls with app object
 
 app.get('/' , (req, res) => {
-  res.send('hey there hows it going?');
+  res.redirect('./client/scr/components/App.js');
 });
 
 /*Must do following for Google Auth strategy to work:
