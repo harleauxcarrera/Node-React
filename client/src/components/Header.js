@@ -25,13 +25,13 @@ renderContent(){
     return(
       <nav>
         <div className="nav-wrapper">
-    
+
             <Link
             // if props.user true return '' : else return '';
             to={this.props.auth ? './surveys' : '/'}
             className = "left brand-logo "
             >
-             Carlos Emaily
+             Carlos Emailyyy
             </Link>
             <ul class="right">
               {this.renderContent()}
