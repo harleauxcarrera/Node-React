@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Payments from './Payments';
 import {connect} from 'react-redux';
 import './main.css'
 //Link tag replaces <a> tag
@@ -17,7 +18,11 @@ renderContent(){
         <li><a href = "/auth/google">Login With Google</a></li>
   );
     default:
-      return <li><a href ="/api/logout">Logout</a></li>;
+
+      return[
+        <li> <Payments/> </li>,
+      <li><a href ="/api/logout">Logout</a></li>
+    ];
   }
 
 }
