@@ -12,6 +12,7 @@ class Payments extends Component {
       stripeKey = {process.env.REACT_APP_STRIPE_KEY}
 
      >
+     //use a material css class for button
      <button className = "btn">
         Pay Up
      </button>
