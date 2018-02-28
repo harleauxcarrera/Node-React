@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./keys');//use usr&password to connect to mongodb instance on line 17
+const bodyParser = require('body-parser');
 require('./models/User')//require in the User model file
 require('./Services/passport');//no need to store constant bc there is no return
 
@@ -19,6 +20,8 @@ mongoose.connect('mongodb://harleauxcarrera:please313@ds151955.mlab.com:51955/no
 
 const app = express();//create the express app
 
+
+app.use(bodyParser.json());
 
 /* app.use() act as middleware to modify incoming requests
 before they are sent off to route handlers*/
@@ -31,8 +34,9 @@ app.use(
 //get app to use cookies
 app.use(passport.initialize());
 app.use(passport.session());
-                              //attatch 'app' object to external routes file
+                //require returns a func and attatch 'app' object to external routes file
 require('./routes/authRoutes')(app);//immediatley calls with app object
+require('./routes/billingRoutes')(app);//require billingRoutes function
 
 
 
