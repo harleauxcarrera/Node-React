@@ -34,8 +34,10 @@ app.use(passport.session());
                               //attatch 'app' object to external routes file
 require('./routes/authRoutes')(app);//immediatley calls with app object
 
+
+
 app.get('/' , (req, res) => {
-  
+
 });
 
 /*Must do following for Google Auth strategy to work:
